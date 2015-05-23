@@ -21,6 +21,8 @@ YJSoft EX 코어는 모듈, 애드온, 에디터 컴포넌트, 위젯, 레이아
 많은 분들께서 개발, 디자인, 마크업 등의 전문 분야는 물론 다국어 번역, 문제점 보고 등 기능 개선 및 문제 해결을 위해 많은 노력을 해주시고 계십니다.
 
 __YJSoft EX 저장소는 XE 1.7 버전의 보안 패치 버전으로, 새로운 기능 추가 등을 받지 않습니다.__
+그 이외 보안이슈 제보 등은 [CONTRIBUTING.md](./CONTRIBUTING.md) 문서를 참고 후 이슈를 남겨 주세요.
+비공개를 원하는 경우 `yjsoft (at) yjsoft.pe.kr` 으로 메일을 보내 주셔도 괜찮습니다.
 
 ## Server Requirements
 * PHP version 5.2.4 or greater (But recommend PHP >= 5.3.11)
