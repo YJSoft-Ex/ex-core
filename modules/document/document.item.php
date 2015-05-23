@@ -525,6 +525,8 @@ class documentItem extends Object
 	{
 		$content = $this->getContent(FALSE, FALSE);
 
+		$content = nl2br($content);
+
 		// For a newlink, inert a whitespace
 		$content = preg_replace('!(<br[\s]*/{0,1}>[\s]*)+!is', ' ', $content);
 
