@@ -2242,8 +2242,6 @@ class memberController extends member
 	 */
 	function updateMemberPassword($args)
 	{
-		$output = executeQuery('member.updateChangePasswordDate', $args);
-
 		if($args->password)
 		{
 
@@ -2271,8 +2269,11 @@ class memberController extends member
 			$args->password = $args->hashed_password;
 		}
 
-		$output = executeQuery('member.updateMemberPassword', $args);;
-
+		$output = executeQuery('member.updateMemberPassword', $args);
+		if($output->toBool())
+		{
+			$result = executeQuery('member.updateChangePasswordDate', $args);
+		}
 		$this->_clearMemberCache($args->member_srl);
 
 		return $output;
