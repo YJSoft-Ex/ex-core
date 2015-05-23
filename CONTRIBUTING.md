@@ -12,7 +12,7 @@ Issue 작성 시 참고해주세요.
 * `master` 브랜치의 코드는 수정하지마세요
 * PR은 `develop` 브랜치만 허용합니다.
 * `develop` 브랜치를 부모로한 토픽 브랜치를 활용하면 편리합니다.
-
+* 기능 추가 등 보안 패치가 아닌 PR은 받지 않습니다. 원본 저장소인 xpressengine/xe-core 저장소 `develop` 브랜치로 재작업후 XE쪽에 공헌해 주세요.
 
 ## Coding Guidelines
 코드를 기여할 때 Coding conventions을 따라야합니다.
