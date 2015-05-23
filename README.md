@@ -1,7 +1,7 @@
 YJSoft EX
 ============
 
-[![Build Status](https://travis-ci.org/YJSoft-Ex/ex-core.svg?branch=master)](https://travis-ci.org/xpressengine/xe-core)
+[![Build Status](https://travis-ci.org/YJSoft-Ex/ex-core.svg?branch=master)](https://travis-ci.org/YJSoft-Ex/ex-core)
 [![License](http://img.shields.io/badge/license-GNU%20LGPL-brightgreen.svg)](http://www.gnu.org/licenses/gpl.html)
 [![Latest release](http://img.shields.io/github/release/YJSoft-Ex/ex-core.svg)](https://github.com/xpressengine/xe-core/releases)
 
