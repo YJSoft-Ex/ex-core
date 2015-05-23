@@ -9,15 +9,15 @@
     <title xml:lang="ru">Фильтр спама</title>
     <title xml:lang="tr">Spam Filtreleyici</title>
     <title xml:lang="zh-TW">垃圾過濾</title>
-    <description xml:lang="ko">XE의 기본 스팸필터입니다.</description>
-    <description xml:lang="zh-CN">XE的基本垃圾过滤模块。</description>
-    <description xml:lang="en">The default spam filter of XE.</description>
-    <description xml:lang="vi">Bộ lọc Spam mặc định của XE.</description>
-    <description xml:lang="es">Filtro de Span predefinido de XE.</description>
-    <description xml:lang="jp">XEのスパムフィルターです。</description>
-    <description xml:lang="ru">Стандартный фильтр спама XE.</description>
-    <description xml:lang="zh-TW">XE的基本垃圾過濾模組。</description>
-    <description xml:lang="tr">XE\'nin varsayılan spam filtreleyicisidir.</description>
+    <description xml:lang="ko">YJSoft EX의 기본 스팸필터입니다.</description>
+    <description xml:lang="zh-CN">YJSoft EX的基本垃圾过滤模块。</description>
+    <description xml:lang="en">The default spam filter of YJSoft EX.</description>
+    <description xml:lang="vi">Bộ lọc Spam mặc định của YJSoft EX.</description>
+    <description xml:lang="es">Filtro de Span predefinido de YJSoft EX.</description>
+    <description xml:lang="jp">YJSoft EXのスパムフィルターです。</description>
+    <description xml:lang="ru">Стандартный фильтр спама YJSoft EX.</description>
+    <description xml:lang="zh-TW">YJSoft EX的基本垃圾過濾模組。</description>
+    <description xml:lang="tr">YJSoft EX\'nin varsayılan spam filtreleyicisidir.</description>
     <version>1.7</version>
     <date>2013-11-27</date>
     <category>accessory</category>

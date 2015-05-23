@@ -1,53 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout version="0.2">
-    <title xml:lang="ko">XE 공식 사이트 레이아웃</title>
-    <title xml:lang="jp">XE公式サイトレイアウト</title>
-    <title xml:lang="en">XE Official website layout</title>
-    <title xml:lang="ge">XE Offizielle Website-Layout</title>
-    <title xml:lang="ru">XE Официальный сайт макет</title>
-    <title xml:lang="es">Diseño oficial de la página web de XE</title>
-    <title xml:lang="zh-CN">XE 官方网站布局</title>
-    <title xml:lang="zh-TW">XE 官方網站版面</title>
-    <title xml:lang="vi">Giao diện chính thức của XE</title>
-    <title xml:lang="tr">XE Resmi Websitesi Yerleşim Düzeni</title>
+    <title xml:lang="ko">YJSoft EX 공식 사이트 레이아웃</title>
+    <title xml:lang="jp">YJSoft EX公式サイトレイアウト</title>
+    <title xml:lang="en">YJSoft EX Official website layout</title>
+    <title xml:lang="ge">YJSoft EX Offizielle Website-Layout</title>
+    <title xml:lang="ru">YJSoft EX Официальный сайт макет</title>
+    <title xml:lang="es">Diseño oficial de la página web de YJSoft EX</title>
+    <title xml:lang="zh-CN">YJSoft EX 官方网站布局</title>
+    <title xml:lang="zh-TW">YJSoft EX 官方網站版面</title>
+    <title xml:lang="vi">Giao diện chính thức của YJSoft EX</title>
+    <title xml:lang="tr">YJSoft EX Resmi Websitesi Yerleşim Düzeni</title>
     <description xml:lang="ko">
-        XE 공식 사이트 레이아웃입니다.
+        YJSoft EX 공식 사이트 레이아웃입니다.
         제작 : NAVER
     </description>
     <description xml:lang="jp">
-        XEの公式サイトのレイアウトです。
+        YJSoft EXの公式サイトのレイアウトです。
         제작 : NAVER
     </description>
     <description xml:lang="en">
-        This layout is the Official website layout for XE.
+        This layout is the Official website layout for YJSoft EX.
         제작 : NAVER
     </description>
     <description xml:lang="ge">
-        Dieses Layout ist das XE Offizielle Website-Layout.
+        Dieses Layout ist das YJSoft EX Offizielle Website-Layout.
         제작 : NAVER
     </description>
     <description xml:lang="ru">
-        Этот формат является XE Официальный сайт компоновку.
+        Этот формат является YJSoft EX Официальный сайт компоновку.
         제작 : NAVER
     </description>
     <description xml:lang="es">
-        Este diseño is el diseño oficial de la página web de Zerobard XE.
+        Este diseño is el diseño oficial de la página web de Zerobard YJSoft EX.
         제작 : NAVER
     </description>
     <description xml:lang="zh-CN">
-        XE官方网站布局。
+        YJSoft EX官方网站布局。
         제작 : NAVER
     </description>
     <description xml:lang="zh-TW">
-        XE官方網站版面。
+        YJSoft EX官方網站版面。
         제작 : NAVER
     </description>
 	<description xml:lang="vi">
-        Đây là giao diện chính thức của XE.
+        Đây là giao diện chính thức của YJSoft EX.
         제작 : NAVER
     </description>
 	<description xml:lang="tr">
-        Bu yerleşim düzeni, XE'nin resmi website yerleşim düzenidir.
+        Bu yerleşim düzeni, YJSoft EX'nin resmi website yerleşim düzenidir.
         제작 : NAVER
     </description>    
     <version>1.7</version>

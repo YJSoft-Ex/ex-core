@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout version="0.2">
-    <title xml:lang="ko">XE Color Code 모바일 레이아웃</title>
-    <title xml:lang="en">XE Color Code Mobile layout</title>
-    <title xml:lang="jp">XE Color Code レイアウト</title>
-    <title xml:lang="zh-CN">XE Color Code 移动布局</title>
-    <title xml:lang="zh-TW">XE Color Code 移动布局</title>
+    <title xml:lang="ko">YJSoft EX Color Code 모바일 레이아웃</title>
+    <title xml:lang="en">YJSoft EX Color Code Mobile layout</title>
+    <title xml:lang="jp">YJSoft EX Color Code レイアウト</title>
+    <title xml:lang="zh-CN">YJSoft EX Color Code 移动布局</title>
+    <title xml:lang="zh-TW">YJSoft EX Color Code 移动布局</title>
     <description xml:lang="ko">
-        XE Color Code 모바일 레이아웃입니다.
+        YJSoft EX Color Code 모바일 레이아웃입니다.
         NAVER (developers@xpressengine.com) 
     </description>
     <description xml:lang="jp">
-        XEの Color Code レイアウトです。
+        YJSoft EXの Color Code レイアウトです。
         제작 : NAVER
     </description>
     <description xml:lang="en">
-        This layout is the XE Color Code Mobile layout for XE.
+        This layout is the YJSoft EX Color Code Mobile layout for YJSoft EX.
         NAVER (developers@xpressengine.com) 
     </description>
     <description xml:lang="zh-CN">
-        XE Color Code 移动布局
+        YJSoft EX Color Code 移动布局
         NAVER (developers@xpressengine.com) 
     </description>
     <description xml:lang="zh-TW">
-        XE Color Code 官方網站版面。
+        YJSoft EX Color Code 官方網站版面。
         NAVER (developers@xpressengine.com) 
     </description>
     <version>1.7</version>

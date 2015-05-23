@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skin version="0.2">
-    <title xml:lang="ko">XE Sapphire 로그인 위젯 스킨</title>
-    <title xml:lang="jp">XE Sapphire Login Info Widget Skin</title>
-    <title xml:lang="zh-CN">XE Sapphire 登录皮肤</title>
-    <title xml:lang="en">XE Sapphire Login Info Widget Skin</title>
-    <title xml:lang="zh-TW">XE Sapphire Login Info Widget Skin</title>
-    <description xml:lang="ko">XE Sapphire 로그인 위젯 스킨</description>
-    <description xml:lang="jp">XE Sapphire Login Info Widget Skin.</description>
-    <description xml:lang="zh-CN">XE Sapphire 登录皮肤</description>
-    <description xml:lang="en">XE Sapphire Login Info Widget Skin.</description>
-    <description xml:lang="zh-TW">XE Sapphire Login Info Widget Skin.</description>
+    <title xml:lang="ko">YJSoft EX Sapphire 로그인 위젯 스킨</title>
+    <title xml:lang="jp">YJSoft EX Sapphire Login Info Widget Skin</title>
+    <title xml:lang="zh-CN">YJSoft EX Sapphire 登录皮肤</title>
+    <title xml:lang="en">YJSoft EX Sapphire Login Info Widget Skin</title>
+    <title xml:lang="zh-TW">YJSoft EX Sapphire Login Info Widget Skin</title>
+    <description xml:lang="ko">YJSoft EX Sapphire 로그인 위젯 스킨</description>
+    <description xml:lang="jp">YJSoft EX Sapphire Login Info Widget Skin.</description>
+    <description xml:lang="zh-CN">YJSoft EX Sapphire 登录皮肤</description>
+    <description xml:lang="en">YJSoft EX Sapphire Login Info Widget Skin.</description>
+    <description xml:lang="zh-TW">YJSoft EX Sapphire Login Info Widget Skin.</description>
     <version>1.7</version>
     <date>2013-11-27</date>
     <link>http://www.xpressengine.com</link>

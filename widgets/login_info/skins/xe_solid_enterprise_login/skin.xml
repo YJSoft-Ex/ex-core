@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skin version="0.2">
-    <title xml:lang="ko">XE 기업용 로그인 스킨</title>
-    <title xml:lang="jp">XE Solid Enterprise Login Skin</title>
-    <title xml:lang="en">XE Solid Enterprise Login Skin</title>
-    <title xml:lang="vi">XE Solid Enterprise Login Skin</title>
-    <title xml:lang="zh-CN">XE标准企业会员登录皮肤</title>
-    <title xml:lang="zh-TW">XE Solid Enterprise Login Skin</title>
-    <title xml:lang="tr">XE Solid Enterprise Login Skin</title>
+    <title xml:lang="ko">YJSoft EX 기업용 로그인 스킨</title>
+    <title xml:lang="jp">YJSoft EX Solid Enterprise Login Skin</title>
+    <title xml:lang="en">YJSoft EX Solid Enterprise Login Skin</title>
+    <title xml:lang="vi">YJSoft EX Solid Enterprise Login Skin</title>
+    <title xml:lang="zh-CN">YJSoft EX标准企业会员登录皮肤</title>
+    <title xml:lang="zh-TW">YJSoft EX Solid Enterprise Login Skin</title>
+    <title xml:lang="tr">YJSoft EX Solid Enterprise Login Skin</title>
     <description xml:lang="ko">
-		XE 기업용 레이아웃과 조합하여 쓰이도록 디자인 된 로그인 위젯스킨입니다.
+		YJSoft EX 기업용 레이아웃과 조합하여 쓰이도록 디자인 된 로그인 위젯스킨입니다.
         NAVER (developers@xpressengine.com)
     </description>
     <description xml:lang="jp">
-        The Skin inherits the style from the XE Solid Enterprise layout, the users are able to login the site conveniently.
+        The Skin inherits the style from the YJSoft EX Solid Enterprise layout, the users are able to login the site conveniently.
 		Author : developer
     </description>
     <description xml:lang="en">
-        The Skin inherits the style from the XE Solid Enterprise layout, the users are able to login the site conveniently.
+        The Skin inherits the style from the YJSoft EX Solid Enterprise layout, the users are able to login the site conveniently.
 		Author : developer
     </description>
     <description xml:lang="vi">
-        The Skin inherits the style from the XE Solid Enterprise layout, the users are able to login the site conveniently.
+        The Skin inherits the style from the YJSoft EX Solid Enterprise layout, the users are able to login the site conveniently.
 		Author : developer
     </description>
     <description xml:lang="zh-CN">
-        The Skin inherits the style from the XE Solid Enterprise layout, the users are able to login the site conveniently.
+        The Skin inherits the style from the YJSoft EX Solid Enterprise layout, the users are able to login the site conveniently.
 		Author : developer
     </description>
     <description xml:lang="zh-TW">
-        The Skin inherits the style from the XE Solid Enterprise layout, the users are able to login the site conveniently.
+        The Skin inherits the style from the YJSoft EX Solid Enterprise layout, the users are able to login the site conveniently.
 		Author : developer
     </description>
     <description xml:lang="tr">
-        The Skin inherits the style from the XE Solid Enterprise layout, the users are able to login the site conveniently.
+        The Skin inherits the style from the YJSoft EX Solid Enterprise layout, the users are able to login the site conveniently.
 		Author : developer
     </description>
     <version>1.7</version>

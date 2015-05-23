@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skin version="0.2">
 	<title xml:lang="ko">회원 기본 모바일 스킨</title>
-	<title xml:lang="en">XE Basic Member Mobile Skin</title>
+	<title xml:lang="en">YJSoft EX Basic Member Mobile Skin</title>
 	<title xml:lang="jp">会員でフォルトモバイルスキン</title>
 	<description xml:lang="ko">
-		XE 기본 모바일 스킨 입니다.
+		YJSoft EX 기본 모바일 스킨 입니다.
 		NAVER (developers@xpressengine.com) 
 	</description>
 	<description xml:lang="jp">
-		XEでフォルトモバイルスキンです。
+		YJSoft EXでフォルトモバイルスキンです。
 		NAVER (developers@xpressengine.com) 
 	</description>
 	<version>1.7</version>

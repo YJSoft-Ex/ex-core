@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skin version="0.2">
-    <title xml:lang="ko">XE 게시판 기본 스킨</title>
-    <title xml:lang="en">XE Basic Board Skin</title>
-    <title xml:lang="zh-TW">XE 基本面板</title>
-    <title xml:lang="tr">XE Temel Pano Dış Görünümü</title>
+    <title xml:lang="ko">YJSoft EX 게시판 기본 스킨</title>
+    <title xml:lang="en">YJSoft EX Basic Board Skin</title>
+    <title xml:lang="zh-TW">YJSoft EX 基本面板</title>
+    <title xml:lang="tr">YJSoft EX Temel Pano Dış Görünümü</title>
     <description xml:lang="ko">
-        XE 게시판의 기본 스킨입니다.
+        YJSoft EX 게시판의 기본 스킨입니다.
         NHN (developers@xpressengine.com) 
     </description>
     <description xml:lang="en">
-        This is the basic board skin of XE.
+        This is the basic board skin of YJSoft EX.
         NHN (developers@xpressengine.com) 
     </description>
     <description xml:lang="tr">
-        XE'nin temel pano dış görünümüdür
+        YJSoft EX'nin temel pano dış görünümüdür
         NHN (developers@xpressengine.com) 
     </description>
     <description xml:lang="zh-TW">
-        XE 基本討論板面板。
+        YJSoft EX 基本討論板面板。
         NHN (developers@xpressengine.com) 
     </description>
     <version>0.1</version>

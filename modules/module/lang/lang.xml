@@ -369,24 +369,24 @@
 		<value xml:lang="vi"><![CDATA[Với ID Website]]></value>
 	</item>
 	<item name="about_domain">
-		<value xml:lang="ko"><![CDATA[1개 이상의 사이트를 만들기 위해서는 전용 도메인이 있어야 합니다. 독립 도메인이나 서브 도메인이 있으면 되고 XE가 설치된 경로까지 같이 넣어주세요. 예) www.xpressengine.com/xe]]></value>
-		<value xml:lang="en"><![CDATA[In order to create more than one virtual site, every club needs to have its own domain name. A sub-domain (e.g., aaa.bbb.com of bbb.com) also can be used. Input the address including the path where XE is installed.   ex) www.xpressengine.com/xe]]></value>
-		<value xml:lang="jp"><![CDATA[複数のホームページを作成するためには、「オリジナルドメイン」や「サブ ドメイン」のような専用のドメインが必要です。 また、 XEのインストールパスも一緒に記入してください。 ex) www.xpressengine.com/xe]]></value>
-		<value xml:lang="zh-CN"><![CDATA[要创建一个站点必须有一个专用域名。 一级域名或二级域名皆可。输入的时候请把XE安装路径也一起输入。 ex) www.xpressengine.com/xe]]></value>
-		<value xml:lang="zh-TW"><![CDATA[要建立網站必須要有個專屬域名。 頂級域名或次級域名都可以。輸入時，請將 XE 安裝路徑也一起輸入。 例) www.xpressengine.com/xe]]></value>
-		<value xml:lang="es"><![CDATA[Para crear un dominio privado de la site requiere.   Independiente de dominio o subdominio, y XE está instalado, el camino que en su conjunto.   Ej.) www.xpressengine.com / zbxe]]></value>
-		<value xml:lang="tr"><![CDATA[Birden fazla sanal website oluşturabilmek için, her birinin kendi alanadına ihtiyacı vardır. Alt-alanadı (örn., aaa.bbb.com of bbb.com) da kullanılabilir. XE'nin de içinde kurulu olduğu yolun adresini giriniz.   örn.) www.xpressengine.com/xe]]></value>
-		<value xml:lang="vi"><![CDATA[Để tạo nhiều Website nhỏ, các Website nhỏ này cần những tên miền riêng của mình. Có thể sử dụng những Subdomain dạng aaa.bbb.com của bbb.com. Hãy nhập địa chỉ bao gồm cả Domain cài đặt XE.   Ví dụ: www.vietxe.net/xe]]></value>
+		<value xml:lang="ko"><![CDATA[1개 이상의 사이트를 만들기 위해서는 전용 도메인이 있어야 합니다. 독립 도메인이나 서브 도메인이 있으면 되고 YJSoft EX가 설치된 경로까지 같이 넣어주세요. 예) www.xpressengine.com/xe]]></value>
+		<value xml:lang="en"><![CDATA[In order to create more than one virtual site, every club needs to have its own domain name. A sub-domain (e.g., aaa.bbb.com of bbb.com) also can be used. Input the address including the path where YJSoft EX is installed.   ex) www.xpressengine.com/xe]]></value>
+		<value xml:lang="jp"><![CDATA[複数のホームページを作成するためには、「オリジナルドメイン」や「サブ ドメイン」のような専用のドメインが必要です。 また、 YJSoft EXのインストールパスも一緒に記入してください。 ex) www.xpressengine.com/xe]]></value>
+		<value xml:lang="zh-CN"><![CDATA[要创建一个站点必须有一个专用域名。 一级域名或二级域名皆可。输入的时候请把YJSoft EX安装路径也一起输入。 ex) www.xpressengine.com/xe]]></value>
+		<value xml:lang="zh-TW"><![CDATA[要建立網站必須要有個專屬域名。 頂級域名或次級域名都可以。輸入時，請將 YJSoft EX 安裝路徑也一起輸入。 例) www.xpressengine.com/xe]]></value>
+		<value xml:lang="es"><![CDATA[Para crear un dominio privado de la site requiere.   Independiente de dominio o subdominio, y YJSoft EX está instalado, el camino que en su conjunto.   Ej.) www.xpressengine.com / zbxe]]></value>
+		<value xml:lang="tr"><![CDATA[Birden fazla sanal website oluşturabilmek için, her birinin kendi alanadına ihtiyacı vardır. Alt-alanadı (örn., aaa.bbb.com of bbb.com) da kullanılabilir. YJSoft EX'nin de içinde kurulu olduğu yolun adresini giriniz.   örn.) www.xpressengine.com/xe]]></value>
+		<value xml:lang="vi"><![CDATA[Để tạo nhiều Website nhỏ, các Website nhỏ này cần những tên miền riêng của mình. Có thể sử dụng những Subdomain dạng aaa.bbb.com của bbb.com. Hãy nhập địa chỉ bao gồm cả Domain cài đặt YJSoft EX.   Ví dụ: www.vietxe.net/xe]]></value>
 	</item>
 	<item name="about_vid">
-		<value xml:lang="ko"><![CDATA[별도의 도메인이 아닌 http://XE주소/ID 로 접속할 수 있습니다. 모듈명(mid)과 중복될 수 없습니다. 첫 글자는 영문으로 시작해야 하고 영문과 숫자 그리고 _ 만 사용할 수 있습니다]]></value>
+		<value xml:lang="ko"><![CDATA[별도의 도메인이 아닌 http://YJSoft EX주소/ID 로 접속할 수 있습니다. 모듈명(mid)과 중복될 수 없습니다. 첫 글자는 영문으로 시작해야 하고 영문과 숫자 그리고 _ 만 사용할 수 있습니다]]></value>
 		<value xml:lang="en"><![CDATA[Users can access via http://XEaddress/ID. You cannot use same site id as the existing module name(mid). Site id should start with an alphabet character. Alphabet characters, numbers and underscore can be used for the site id.]]></value>
-		<value xml:lang="jp"><![CDATA[別途のドメインではなく、「http://XEアドレス/ID」へのアクセスが可能です。この際、モジュール名(mid)と重複しないように登録してください。 必ず、頭文字は半角英文字にし、「（すべて半角の）英数字・_ 」 だけの組み合わせで入力してください。]]></value>
-		<value xml:lang="zh-CN"><![CDATA[直接以http://XE安装地址/ID的方式访问。 模块名(mid)不能重复。 模块名要以英文字母开头，且只允许使用英文字母，数字及"_"。]]></value>
+		<value xml:lang="jp"><![CDATA[別途のドメインではなく、「http://YJSoft EXアドレス/ID」へのアクセスが可能です。この際、モジュール名(mid)と重複しないように登録してください。 必ず、頭文字は半角英文字にし、「（すべて半角の）英数字・_ 」 だけの組み合わせで入力してください。]]></value>
+		<value xml:lang="zh-CN"><![CDATA[直接以http://YJSoft EX安装地址/ID的方式访问。 模块名(mid)不能重复。 模块名要以英文字母开头，且只允许使用英文字母，数字及"_"。]]></value>
 		<value xml:lang="zh-TW"><![CDATA[直接以 http://程式安裝位址/ID 的方式訪問。模組名稱(mid)不能重複。 必須要以英文字母開頭，只允許使用底線、英文及數字。]]></value>
-		<value xml:lang="fr"><![CDATA[별도의 도메인이 아닌 http://XE주소/ID 로 접속할 수 있습니다. 모듈명(mid)와 중복될 수 없습니다. 첫글자는 영문으로 시작해야 하고 영문과 숫자 그리고 _ 만 사용할 수 있습니다]]></value>
-		<value xml:lang="ru"><![CDATA[별도의 도메인이 아닌 http://XE주소/ID 로 접속할 수 있습니다. 모듈명(mid)와 중복될 수 없습니다. 첫글자는 영문으로 시작해야 하고 영문과 숫자 그리고 _ 만 사용할 수 있습니다]]></value>
-		<value xml:lang="es"><![CDATA[별도의 도메인이 아닌 http://XE주소/ID 로 접속할 수 있습니다. 모듈명(mid)와 중복될 수 없습니다. 첫글자는 영문으로 시작해야 하고 영문과 숫자 그리고 _ 만 사용할 수 있습니다]]></value>
+		<value xml:lang="fr"><![CDATA[별도의 도메인이 아닌 http://YJSoft EX주소/ID 로 접속할 수 있습니다. 모듈명(mid)와 중복될 수 없습니다. 첫글자는 영문으로 시작해야 하고 영문과 숫자 그리고 _ 만 사용할 수 있습니다]]></value>
+		<value xml:lang="ru"><![CDATA[별도의 도메인이 아닌 http://YJSoft EX주소/ID 로 접속할 수 있습니다. 모듈명(mid)와 중복될 수 없습니다. 첫글자는 영문으로 시작해야 하고 영문과 숫자 그리고 _ 만 사용할 수 있습니다]]></value>
+		<value xml:lang="es"><![CDATA[별도의 도메인이 아닌 http://YJSoft EX주소/ID 로 접속할 수 있습니다. 모듈명(mid)와 중복될 수 없습니다. 첫글자는 영문으로 시작해야 하고 영문과 숫자 그리고 _ 만 사용할 수 있습니다]]></value>
 		<value xml:lang="tr"><![CDATA[Kullanıcılar, http://XEaddress/ID adresiyle ulaşabilirler. Varolan bir modül adıyla(mid) aynı olan site kimliği kullanamazsınız . Site kimliği bir harfle başlamaladır . Alfabetik karakterler, sayılar ve _ işareti site kimliği için kullanılabilir.]]></value>
 		<value xml:lang="vi"><![CDATA[Người sử dụng có thể truy cập qua http://XEaddress/ID. Bạn không thể sử dụng ID giống nhau và giống tên Module đã có. Teen ID có dạng là các chữ cái, số và dấu gạch dưới (_).]]></value>
 	</item>
@@ -930,20 +930,20 @@
 		<value xml:lang="vi"><![CDATA[Khi thành viên dăng kí tại trang chủ, nghĩa là họ cũng là thành viên của những trang khác (Ví dụ: cafeXE,...).]]></value>
 	</item>
 	<item name="about_module">
-		<value xml:lang="ko"><![CDATA[XE는 기본 라이브러리를 제외한 나머지는 모두 모듈로 구성되어 있습니다. 모듈 관리 모듈은 설치된 모든 모듈을 보여주고 관리를 돕습니다.]]></value>
-		<value xml:lang="en"><![CDATA[XE consists of modules except the basic library. [Module Manage] module will show all installed modules and help you to manage them.]]></value>
-		<value xml:lang="jp"><![CDATA[XEは、基本ライブラリの他は、すべてモジュールで構成されています。モジュール管理用のモジュールはインストールされたすべてを表示し、管理できるようにします。]]></value>
-		<value xml:lang="zh-CN"><![CDATA[除基本library以外XE全部由模块组成。 模块管理中列出所有已安装的模块，因此易于管理。]]></value>
-		<value xml:lang="zh-TW"><![CDATA[除基本函式庫以外 XE 全部由模組組成。 模組管理中列出所有已安裝的模組，因此易於管理。]]></value>
-		<value xml:lang="fr"><![CDATA[XE se compose des modules sauf la bibliothèque fondamental.
+		<value xml:lang="ko"><![CDATA[YJSoft EX는 기본 라이브러리를 제외한 나머지는 모두 모듈로 구성되어 있습니다. 모듈 관리 모듈은 설치된 모든 모듈을 보여주고 관리를 돕습니다.]]></value>
+		<value xml:lang="en"><![CDATA[YJSoft EX consists of modules except the basic library. [Module Manage] module will show all installed modules and help you to manage them.]]></value>
+		<value xml:lang="jp"><![CDATA[YJSoft EXは、基本ライブラリの他は、すべてモジュールで構成されています。モジュール管理用のモジュールはインストールされたすべてを表示し、管理できるようにします。]]></value>
+		<value xml:lang="zh-CN"><![CDATA[除基本library以外YJSoft EX全部由模块组成。 模块管理中列出所有已安装的模块，因此易于管理。]]></value>
+		<value xml:lang="zh-TW"><![CDATA[除基本函式庫以外 YJSoft EX 全部由模組組成。 模組管理中列出所有已安裝的模組，因此易於管理。]]></value>
+		<value xml:lang="fr"><![CDATA[YJSoft EX se compose des modules sauf la bibliothèque fondamental.
 Le module [Administration des Modules] montera tous les modules installés et vous aidera les administrer.]]></value>
-		<value xml:lang="ru"><![CDATA[XE состоит из модулей, за исключением базовой библиотеки.
+		<value xml:lang="ru"><![CDATA[YJSoft EX состоит из модулей, за исключением базовой библиотеки.
  Управление модулем покажет все установленные модули и поможет управлять ими.]]></value>
-		<value xml:lang="es"><![CDATA[XE consiste de módulos excepto la librería básica.
+		<value xml:lang="es"><![CDATA[YJSoft EX consiste de módulos excepto la librería básica.
  Módulo del Manejo del Módulo muestra todos los módulos instalados y ayuda el manejo de ellos.]]></value>
-		<value xml:lang="tr"><![CDATA[XE, temel kitaplık dışında, modüllerden oluşmaktadır. 
+		<value xml:lang="tr"><![CDATA[YJSoft EX, temel kitaplık dışında, modüllerden oluşmaktadır. 
  [Modül Yönetimi] modülü, size kurulu tüm modülleri gösterecek ve onları yönetmenize yardımcı olacaktır.]]></value>
-		<value xml:lang="vi"><![CDATA[Khu vực Module trong XE ngoại trừ Library là tại [Module Manage]. Tất cả những Module đang có sẽ hiển thị, giúp bạn quản lý một cách dễ dàng.]]></value>
+		<value xml:lang="vi"><![CDATA[Khu vực Module trong YJSoft EX ngoại trừ Library là tại [Module Manage]. Tất cả những Module đang có sẽ hiển thị, giúp bạn quản lý một cách dễ dàng.]]></value>
 	</item>
 	<item name="about_extra_vars_default_value">
 		<value xml:lang="ko"><![CDATA[다중/단일 선택 등 기본 값이 여러 개가 필요한 경우 , (콤마)로 연결하면 됩니다.]]></value>
@@ -963,9 +963,9 @@ Le module [Administration des Modules] montera tous les modules installés et vo
 		<value xml:lang="jp"><![CDATA[バーチャル(Virtual)サイト（：cafeXEなど）のドメインを入力して検索してください。 バーチャル(Virtual)サイト以外のモジュールは内容を空にしてから検索します。（http://は省く）]]></value>
 		<value xml:lang="zh-CN"><![CDATA[请输入子站点域名后再进行搜索。 子站点以外的模块可以留空搜索。(输入时http://除外)。]]></value>
 		<value xml:lang="zh-TW"><![CDATA[請輸入網站域名後再搜尋。 網站以外的模組可直接進行搜尋。(http://不用輸入)。]]></value>
-		<value xml:lang="fr"><![CDATA[가상 사이트(카페XE등)의 도메인을 입력한 후 검색하세요. 가상 사이트이외의 모듈은 내용을 비우고 검색하면 됩니다.  (http:// 는 제외)]]></value>
-		<value xml:lang="ru"><![CDATA[가상 사이트(카페XE등)의 도메인을 입력한 후 검색하세요. 가상 사이트이외의 모듈은 내용을 비우고 검색하면 됩니다.  (http:// 는 제외)]]></value>
-		<value xml:lang="es"><![CDATA[가상 사이트(카페XE등)의 도메인을 입력한 후 검색하세요. 가상 사이트이외의 모듈은 내용을 비우고 검색하면 됩니다.  (http:// 는 제외)]]></value>
+		<value xml:lang="fr"><![CDATA[가상 사이트(카페YJSoft EX등)의 도메인을 입력한 후 검색하세요. 가상 사이트이외의 모듈은 내용을 비우고 검색하면 됩니다.  (http:// 는 제외)]]></value>
+		<value xml:lang="ru"><![CDATA[가상 사이트(카페YJSoft EX등)의 도메인을 입력한 후 검색하세요. 가상 사이트이외의 모듈은 내용을 비우고 검색하면 됩니다.  (http:// 는 제외)]]></value>
+		<value xml:lang="es"><![CDATA[가상 사이트(카페YJSoft EX등)의 도메인을 입력한 후 검색하세요. 가상 사이트이외의 모듈은 내용을 비우고 검색하면 됩니다.  (http:// 는 제외)]]></value>
 		<value xml:lang="tr"><![CDATA[Sanal sitelerin alanadlarını giriniz. Sanal olmayan sitelerin modüllerini aramak için, boş arama yapınız]]></value>
 		<value xml:lang="vi"><![CDATA[Hãy nhập tên miền thực tế của Website. Để tìm kiếm những Module không thực tế của Website hãy để trống.]]></value>
 	</item>
@@ -1004,10 +1004,10 @@ Le module [Administration des Modules] montera tous les modules installés et vo
 		<value xml:lang="zh-TW"><![CDATA[模組登錄失敗]]></value>
 	</item>
 	<item name="multilingual_desc">
-		<value xml:lang="ko"><![CDATA[현재 12 종류의 다국어 문자를 지원할 수 있습니다. 다른 종류의 다국어 지원을 원하는 경우 /common/lang/ 폴더의 다국어 가운데 하나의 세트를 번역해서 XE 개발자(contact@xpressengine.com)에게 보내주세요.]]></value>
-		<value xml:lang="en"><![CDATA[XE supports 12 languages currently. If you want to use another language, translate one set of languages in /common/lang/ folder into that language and send it to us (contact@xpressengine.com).]]></value>
-		<value xml:lang="jp"><![CDATA[XEは、12種類の多国語をサポートしています。他の種類の多国語のサポートを希望する場合は、/common/lang/フォルダの多国語のうち、ひとつのセットを翻訳してXE開発者(contact@xpressengine.com)までお送りください。]]></value>
-		<value xml:lang="zh-TW"><![CDATA[XE 目前支援 12 種國際語言。 想添加其他語言，請將 /common/lang/ 目錄的檔案新增翻譯後，寄至 XE 開發團隊(contact@xpressengine.com)]]></value>
+		<value xml:lang="ko"><![CDATA[현재 12 종류의 다국어 문자를 지원할 수 있습니다. 다른 종류의 다국어 지원을 원하는 경우 /common/lang/ 폴더의 다국어 가운데 하나의 세트를 번역해서 YJSoft EX 개발자(contact@xpressengine.com)에게 보내주세요.]]></value>
+		<value xml:lang="en"><![CDATA[YJSoft EX supports 12 languages currently. If you want to use another language, translate one set of languages in /common/lang/ folder into that language and send it to us (contact@xpressengine.com).]]></value>
+		<value xml:lang="jp"><![CDATA[YJSoft EXは、12種類の多国語をサポートしています。他の種類の多国語のサポートを希望する場合は、/common/lang/フォルダの多国語のうち、ひとつのセットを翻訳してYJSoft EX開発者(contact@xpressengine.com)までお送りください。]]></value>
+		<value xml:lang="zh-TW"><![CDATA[YJSoft EX 目前支援 12 種國際語言。 想添加其他語言，請將 /common/lang/ 目錄的檔案新增翻譯後，寄至 YJSoft EX 開發團隊(contact@xpressengine.com)]]></value>
 	</item>
 	<item name="add_word">
 		<value xml:lang="ko"><![CDATA[새로운 단어 또는 문장 추가]]></value>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout version="0.2" type="faceoff">
-    <title xml:lang="ko">XE Face off 레이아웃</title>
-    <title xml:lang="vi">Giao diện XE FaceOff</title>
-    <title xml:lang="zh-CN">XE Face off官方布局</title>
-    <title xml:lang="zh-TW">XE Face off 版面</title>
-    <title xml:lang="jp">XE Face offレイアウト</title>
-    <title xml:lang="tr">XE Face off Yerleşim Düzeni</title>
-    <description xml:lang="ko">XE FaceOff 레이아웃입니다.</description>
-    <description xml:lang="vi">Giao diện của XE FaceOff.</description>
-    <description xml:lang="zh-CN">XE Face off官方布局。</description>
-    <description xml:lang="zh-TW">XE FaceOff版面</description>
-    <description xml:lang="jp">XE FaceOffレイアウトです。</description>
-    <description xml:lang="tr">XE FaceOff Yerleşim Düzeni</description>
+    <title xml:lang="ko">YJSoft EX Face off 레이아웃</title>
+    <title xml:lang="vi">Giao diện YJSoft EX FaceOff</title>
+    <title xml:lang="zh-CN">YJSoft EX Face off官方布局</title>
+    <title xml:lang="zh-TW">YJSoft EX Face off 版面</title>
+    <title xml:lang="jp">YJSoft EX Face offレイアウト</title>
+    <title xml:lang="tr">YJSoft EX Face off Yerleşim Düzeni</title>
+    <description xml:lang="ko">YJSoft EX FaceOff 레이아웃입니다.</description>
+    <description xml:lang="vi">Giao diện của YJSoft EX FaceOff.</description>
+    <description xml:lang="zh-CN">YJSoft EX Face off官方布局。</description>
+    <description xml:lang="zh-TW">YJSoft EX FaceOff版面</description>
+    <description xml:lang="jp">YJSoft EX FaceOffレイアウトです。</description>
+    <description xml:lang="tr">YJSoft EX FaceOff Yerleşim Düzeni</description>
     <version>1.7</version>
     <date>2013-11-27</date>
     <author email_address="developers@xpressengine.com" link="http://xpressengine.com/">
