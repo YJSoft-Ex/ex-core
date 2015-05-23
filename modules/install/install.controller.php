@@ -354,8 +354,8 @@ class installController extends install
 		// 2. Check if xml_parser_create exists
 		if(function_exists('xml_parser_create')) $checklist['xml'] = true;
 		else $checklist['xml'] = false;
-		// 3. Check if ini_get (session.auto_start) == 1
-		if(ini_get(session.auto_start)!=1) $checklist['session'] = true;
+		// 3. Check if ini_get ('session.auto_start') == 1
+		if(ini_get('session.auto_start')!=1) $checklist['session'] = true;
 		else $checklist['session'] = false;
 		// 4. Check if iconv exists
 		if(function_exists('iconv')) $checklist['iconv'] = true;
