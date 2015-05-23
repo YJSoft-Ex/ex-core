@@ -1,4 +1,5 @@
 /*! Copyright (C) NAVER <http://www.navercorp.com> */
+/*! Maintainer @YJSoft */
 /**!
  * @concat modernizr.js + common.js + js_app.js + xml_handler.js + xml_js_filter.js
  * @brief XE Common JavaScript
