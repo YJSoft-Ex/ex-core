@@ -1015,7 +1015,7 @@ class memberModel extends member
 		$isSha1 = ($this->useSha1 && function_exists('sha1'));
 
 		// Return true if the user input is equal to md5 hash value
-		if($hashed_password == md5($password_text))
+		if($hashed_password === md5($password_text))
 		{
 			if($isSha1 && $member_srl > 0)
 			{
@@ -1029,7 +1029,7 @@ class memberModel extends member
 		}
 
 		// Return true if the user input is equal to the value of mysql_pre4_hash_password
-		if(mysql_pre4_hash_password($password_text) == $hashed_password)
+		if(mysql_pre4_hash_password($password_text) === $hashed_password)
 		{
 			if($isSha1 && $member_srl > 0)
 			{
@@ -1060,7 +1060,7 @@ class memberModel extends member
 			}
 		}
 
-		if($isSha1 && $hashed_password == md5(sha1(md5($password_text)))) return true;
+		if($isSha1 && $hashed_password === md5(sha1(md5($password_text)))) return true;
 
 		return false;
 	}
