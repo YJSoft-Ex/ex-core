@@ -1,16 +1,17 @@
-XpressEngine
+YJSoft EX
 ============
 
-[![Build Status](https://travis-ci.org/xpressengine/xe-core.svg?branch=master)](https://travis-ci.org/xpressengine/xe-core)
+[![Build Status](https://travis-ci.org/YJSoft-Ex/ex-core.svg?branch=master)](https://travis-ci.org/xpressengine/xe-core)
 [![License](http://img.shields.io/badge/license-GNU%20LGPL-brightgreen.svg)](http://www.gnu.org/licenses/gpl.html)
-[![Latest release](http://img.shields.io/github/release/xpressengine/xe-core.svg)](https://github.com/xpressengine/xe-core/releases)
+[![Latest release](http://img.shields.io/github/release/YJSoft-Ex/ex-core.svg)](https://github.com/xpressengine/xe-core/releases)
 
-XpressEngine(XE)은 누구나 쉽고 편하고 자유롭게 콘텐츠를 발행을 할 수 있도록 하기 위한 CMS(Content Management System)입니다.
+YJSoft EX는 누구나 쉽고 편하고 자유롭게 콘텐츠를 발행을 할 수 있도록 하기 위한 CMS(Content Management System)입니다.
+XpressEngine(XE) 1.7.13 버전을 기반으로 하여 PHP 5.2에서도 안정적으로 사용하실 수 있습니다.
 오픈소스 라이선스로 누구나 사용 또는 개작할 수 있으며, 개방형 프로젝트로서 누구나 개발에 참여할 수 있습니다.
 
 ### 확장형 구조
 
-XE 코어는 모듈, 애드온, 에디터 컴포넌트, 위젯, 레이아웃의 구조를 기반으로 결과물을 생성합니다. 
+YJSoft EX 코어는 모듈, 애드온, 에디터 컴포넌트, 위젯, 레이아웃의 구조를 기반으로 결과물을 생성합니다. 
 
 이렇게 각각의 기능과 디자인이 구조적으로 연결되는 모듈형 구조는 개발 및 유지보수를 쉽게하도록 도와주며 관리자는 손쉽게 설정과 디자인을 변경할 수 있습니다.
 
@@ -19,8 +20,7 @@ XE 코어는 모듈, 애드온, 에디터 컴포넌트, 위젯, 레이아웃의 
 ### 오픈 소스 소프트웨어! 열린 프로젝트! (코드 공헌 가이드)
 많은 분들께서 개발, 디자인, 마크업 등의 전문 분야는 물론 다국어 번역, 문제점 보고 등 기능 개선 및 문제 해결을 위해 많은 노력을 해주시고 계십니다.
 
-참여를 원하시는 분들은 버그 신고/제안 혹은 Pull Request 전 [CONTRIBUTING.md](./CONTRIBUTING.md) 문서를 먼저 읽어주시기 바랍니다.
-XpressEngine은 여러분들의 개발 참여를 기다립니다.
+__YJSoft EX 저장소는 XE 1.7 버전의 보안 패치 버전으로, 새로운 기능 추가 등을 받지 않습니다.__
 
 ## Server Requirements
 * PHP version 5.2.4 or greater (But recommend PHP >= 5.3.11)
@@ -31,13 +31,13 @@ XpressEngine은 여러분들의 개발 참여를 기다립니다.
 * session.auto_start = Off (php.ini)
 
 ## Maintainers
-@akasima @bnu @jhyeon1010 @khongchi @findstar @ngleader
+@YJSoft
 
 ## Contributors
 http://www.xpressengine.com/contributors
 
 ## Support
-* Official sitie (Korean) : http://www.xpressengine.com/
+* Official sitie (Korean) : (준비중)
 
 ## License
 Copyright 2014 NAVER Corp. <http://www.navercorp.com>
