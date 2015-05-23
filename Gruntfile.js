@@ -279,13 +279,14 @@ module.exports = function(grunt) {
 					createPackageChecksum(build_dir + '/xe.'+version+'.tar.gz');
 
 					grunt.util.spawn({
-						cmd: "zip",
-						args: ['-r', '../xe.'+version+'.zip', './'],
+						cmd: "7z",
+						args: ['a','-tzip','-r', '../xe.'+version+'.zip', './'],
 						opts: {
 							cwd: 'build/xe',
 							cache: false
 						}
 					}, function (error, result, code) {
+
 						grunt.log.ok('Archived(full) : ' + build_dir + '/xe.'+version+'.zip');
 						createPackageChecksum(build_dir + '/xe.'+version+'.zip');
 
