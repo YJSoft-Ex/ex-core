@@ -49,32 +49,26 @@ class pointAdminController extends point
 		// Check if reading a document is not allowed
 		if($args->disable_read_document == 'Y') $config->disable_read_document = 'Y';
 		else $config->disable_read_document = 'N';
-
 		$oMemberModel = getModel('member');
 		$group_list = $oMemberModel->getGroups();
-
 		// Per-level group configurations
 		foreach($group_list as $group)
 		{
 			// Admin group should not be connected to point.
 			if($group->is_admin == 'Y' || $group->is_default == 'Y') continue;
-
 			$group_srl = $group->group_srl;
-
-			//if group level is higher than max level, change to max level
-			if($args->{'point_group_'.$group_srl} > $args->max_level)
+			if(isset($args->{'point_group_'.$group_srl}))
 			{
-				$args->{'point_group_'.$group_srl} = $args->max_level;
-			}
-
-			//if group level is lower than 1, change to 1
-			if($args->{'point_group_'.$group_srl} < 1)
-			{
-				$args->{'point_group_'.$group_srl} = 1;
-			}
-
-			if($args->{'point_group_'.$group_srl})
-			{
+				//if group level is higher than max level, change to max level
+				if($args->{'point_group_'.$group_srl} > $args->max_level)
+				{
+					$args->{'point_group_'.$group_srl} = $args->max_level;
+				}
+				//if group level is lower than 1, change to 1
+				if($args->{'point_group_'.$group_srl} < 1)
+				{
+					$args->{'point_group_'.$group_srl} = 1;
+				}
 				$config->point_group[$group_srl] = $args->{'point_group_'.$group_srl};
 			}
 			else
@@ -82,7 +76,6 @@ class pointAdminController extends point
 				unset($config->point_group[$group_srl]);
 			}
 		}
-
 		$config->group_reset = $args->group_reset;
 		// Per-level point configurations
 		unset($config->level_step);
@@ -96,9 +89,7 @@ class pointAdminController extends point
 		// Save
 		$oModuleController = getController('module');
 		$oModuleController->insertModuleConfig('point', $config);
-
 		$this->setMessage('success_updated');
-
 		$returnUrl = Context::get('success_return_url') ? Context::get('success_return_url') : getNotEncodedUrl('', 'module', 'admin', 'act', 'dispPointAdminConfig');
 		$this->setRedirectUrl($returnUrl);
 	}
