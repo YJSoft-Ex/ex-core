@@ -29,7 +29,7 @@ define('__ZBXE__', __XE__);
 /**
  * Display XE's full version.
  */
-define('__YJSOFTEX_VERSION__', '1.7.16-beta');
+define('__YJSOFTEX_VERSION__', '1.7.16-beta2');
 define('__YJSOFTEX_VERSION_ALPHA__', (stripos(__YJSOFTEX_VERSION__, 'alpha') !== false));
 define('__YJSOFTEX_VERSION_BETA__', (stripos(__YJSOFTEX_VERSION__, 'beta') !== false));
 define('__YJSOFTEX_VERSION_RC__', (stripos(__YJSOFTEX_VERSION__, 'rc') !== false));
