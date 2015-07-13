@@ -643,8 +643,13 @@ class commentController extends comment
 	 * @param bool $is_admin
 	 * @return object
 	 */
-	function updateComment($obj, $is_admin = FALSE)
+	function updateComment($obj, $is_admin = FALSE, $manual_updated = FALSE)
 	{
+		if(!$manual_updated && !checkCSRF())
+		{
+			return new Object(-1, 'msg_invalid_request');
+		}
+		
 		if(!is_object($obj))
 		{
 			$obj = new stdClass();
