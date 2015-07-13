@@ -11,8 +11,8 @@
 
 	<ul>
 		<li>매우 심각한 PHP 보안 문제 및 공격에 노출될 수 있습니다.</li>
-		<li>YJSoft EX 최신 버전을 사용할 수 없습니다.</li>
-		<li>YJSoft EX 최신 버전 이상을 지원하는 확장 기능을 사용할 수 없습니다.</li>
+		<li>XpressEngine 최신 버전을 사용할 수 없습니다.</li>
+		<li>XpressEngine 최신 버전 이상을 지원하는 확장 기능을 사용할 수 없습니다.</li>
 		<li>일부 확장 기능이 동작하지 않거나, 이로 인해 장애가 발생할 수 있습니다.</li>
 	</ul>
 </div>
@@ -29,6 +29,9 @@
 	<p>{$lang->description_install}</p>
 	<ul>
 		<li loop="$package->depends => $dep">
+			<div cond="$dep->package_srl == 18325662" class="message info">
+				<p>YJSoft EX에서 XE 코어 업데이트는 적용되지 않습니다.</p>
+			</div>
 			{$dep->title} ver. {$dep->version} -
 			<block cond="$dep->installed">{$lang->current_version}: {$dep->cur_version} <block cond="$dep->need_update">({$lang->require_update})</block></block>
 			<block cond="!$dep->installed">{$lang->require_installation}</block>
