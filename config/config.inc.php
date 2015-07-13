@@ -29,7 +29,7 @@ define('__ZBXE__', __XE__);
 /**
  * Display XE's full version.
  */
-define('__YJSOFTEX_VERSION__', '1.7.16-beta2');
+define('__YJSOFTEX_VERSION__', '1.7.16-beta4');
 define('__YJSOFTEX_VERSION_ALPHA__', (stripos(__YJSOFTEX_VERSION__, 'alpha') !== false));
 define('__YJSOFTEX_VERSION_BETA__', (stripos(__YJSOFTEX_VERSION__, 'beta') !== false));
 define('__YJSOFTEX_VERSION_RC__', (stripos(__YJSOFTEX_VERSION__, 'rc') !== false));
@@ -40,7 +40,7 @@ define('__XE_MIN_PHP_VERSION__', '5.3.0');
 /**
  * @deprecated __XE_VERSION__ will be removed. Use __YJSOFTEX_VERSION__ instead.
  */
-define('__XE_VERSION__', __YJSOFTEX_VERSION__);
+define('__XE_VERSION__', '1.7.16-beta4');
 define('__XE_VERSION_ALPHA__', __YJSOFTEX_VERSION_ALPHA__);
 define('__XE_VERSION_BETA__', __YJSOFTEX_VERSION_BETA__);
 define('__XE_VERSION_RC__', __YJSOFTEX_VERSION_RC__);
