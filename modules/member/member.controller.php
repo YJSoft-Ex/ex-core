@@ -71,6 +71,11 @@ class memberController extends member
 				return $this->setRedirectUrl(getNotEncodedUrl('','vid',Context::get('vid'),'mid',Context::get('mid'),'act','dispMemberModifyPassword'), new Object(-1, $msg));
 			}
 		}
+		
+		// Delete all previous authmail if login is successful
+		$args = new stdClass();
+		$args->member_srl = $this->memberInfo->member_srl;
+		executeQuery('member.deleteAuthMail', $args);
 
 		if(!$config->after_login_url)
 		{
@@ -1098,10 +1103,17 @@ class memberController extends member
 	 */
 	function procMemberAuthAccount()
 	{
+		$oMemberModel = getModel('member');
+		
 		// Test user_id and authkey
 		$member_srl = Context::get('member_srl');
 		$auth_key = Context::get('auth_key');
-		if(!$member_srl || !$auth_key) return $this->stop('msg_invalid_request');
+		
+		if(!$member_srl || !$auth_key)
+		{
+			return $this->stop('msg_invalid_request');
+		}
+
 		// Test logs for finding password by user_id and authkey
 		$args = new stdClass;
 		$args->member_srl = $member_srl;
@@ -1110,9 +1122,21 @@ class memberController extends member
 
 		if(!$output->toBool() || $output->data->auth_key != $auth_key)
 		{
-			if(strlen($output->data->auth_key) !== strlen($auth_key)) executeQuery('member.deleteAuthMail', $args);
+			if(strlen($output->data->auth_key) !== strlen($auth_key))
+			{
+				executeQuery('member.deleteAuthMail', $args);
+			}
 			return $this->stop('msg_invalid_auth_key');
 		}
+		
+		if(ztime($output->data->regdate) < $_SERVER['REQUEST_TIME'] + zgap() - 86400)
+		{
+			executeQuery('member.deleteAuthMail', $args);
+			return $this->stop('msg_invalid_auth_key');
+		}
+		
+		$args->password = $output->data->new_password;
+
 		// If credentials are correct, change the password to a new one
 		if($output->data->is_register == 'Y')
 		{
@@ -1122,13 +1146,15 @@ class memberController extends member
 		else
 		{
 			$args->password = md5($output->data->new_password);
-			unset($args->denied);
 		}
 		// Back up the value of $Output->data->is_register
 		$is_register = $output->data->is_register;
 
 		$output = executeQuery('member.updateMemberPassword', $args);
-		if(!$output->toBool()) return $this->stop($output->getMessage());
+		if(!$output->toBool())
+		{
+			return $this->stop($output->getMessage());
+		}
 		// Remove all values having the member_srl from authentication table
 		executeQuery('member.deleteAuthMail',$args);
 
@@ -1245,6 +1271,12 @@ class memberController extends member
 		$output = executeQueryArray('member.getAuthMailInfo', $auth_args);
 		if(!$output->data || !$output->data[0]->auth_key)  return new Object(-1, 'msg_invalid_request');
 		$auth_info = $output->data[0];
+		
+		// Update the regdate of authmail entry
+		$renewal_args = new stdClass;
+		$renewal_args->member_srl = $member_info->member_srl;
+		$renewal_args->auth_key = $auth_info->auth_key;
+		$output = executeQuery('member.updateAuthMail', $renewal_args);	
 
 		$memberInfo = array();
 		global $lang;
