@@ -71,6 +71,11 @@ class memberController extends member
 				return $this->setRedirectUrl(getNotEncodedUrl('','vid',Context::get('vid'),'mid',Context::get('mid'),'act','dispMemberModifyPassword'), new Object(-1, $msg));
 			}
 		}
+		
+		// Delete all previous authmail if login is successful
+		$args = new stdClass();
+		$args->member_srl = $this->memberInfo->member_srl;
+		executeQuery('member.deleteAuthMail', $args);
 
 		if(!$config->after_login_url)
 		{
@@ -321,13 +326,12 @@ class memberController extends member
 		$args->extra_vars = serialize($extra_vars);
 
 		// remove whitespace
-		$checkInfos = array('user_id', 'nick_name', 'email_address');
-		$replaceStr = array("\r\n", "\r", "\n", " ", "\t", "\xC2\xAD");
+		$checkInfos = array('user_id', 'user_name', 'nick_name', 'email_address');
 		foreach($checkInfos as $val)
 		{
 			if(isset($args->{$val}))
 			{
-				$args->{$val} = str_replace($replaceStr, '', $args->{$val});
+				$args->{$val} = preg_replace('/[\pZ\pC]+/u', '', $args->{$val});
 			}
 		}
 		$output = $this->insertMember($args);
@@ -534,13 +538,12 @@ class memberController extends member
 		$args->extra_vars = serialize($extra_vars);
 
 		// remove whitespace
-		$checkInfos = array('user_id', 'nick_name', 'email_address');
-		$replaceStr = array("\r\n", "\r", "\n", " ", "\t", "\xC2\xAD");
+		$checkInfos = array('user_id', 'user_name', 'nick_name', 'email_address');
 		foreach($checkInfos as $val)
 		{
 			if(isset($args->{$val}))
 			{
-				$args->{$val} = str_replace($replaceStr, '', $args->{$val});
+				$args->{$val} = preg_replace('/[\pZ\pC]+/u', '', $args->{$val});
 			}
 		}
 
@@ -1100,10 +1103,17 @@ class memberController extends member
 	 */
 	function procMemberAuthAccount()
 	{
+		$oMemberModel = getModel('member');
+		
 		// Test user_id and authkey
 		$member_srl = Context::get('member_srl');
 		$auth_key = Context::get('auth_key');
-		if(!$member_srl || !$auth_key) return $this->stop('msg_invalid_request');
+		
+		if(!$member_srl || !$auth_key)
+		{
+			return $this->stop('msg_invalid_request');
+		}
+
 		// Test logs for finding password by user_id and authkey
 		$args = new stdClass;
 		$args->member_srl = $member_srl;
@@ -1112,9 +1122,21 @@ class memberController extends member
 
 		if(!$output->toBool() || $output->data->auth_key != $auth_key)
 		{
-			if(strlen($output->data->auth_key) !== strlen($auth_key)) executeQuery('member.deleteAuthMail', $args);
+			if(strlen($output->data->auth_key) !== strlen($auth_key))
+			{
+				executeQuery('member.deleteAuthMail', $args);
+			}
 			return $this->stop('msg_invalid_auth_key');
 		}
+		
+		if(ztime($output->data->regdate) < $_SERVER['REQUEST_TIME'] + zgap() - 86400)
+		{
+			executeQuery('member.deleteAuthMail', $args);
+			return $this->stop('msg_invalid_auth_key');
+		}
+		
+		$args->password = $output->data->new_password;
+
 		// If credentials are correct, change the password to a new one
 		if($output->data->is_register == 'Y')
 		{
@@ -1124,13 +1146,15 @@ class memberController extends member
 		else
 		{
 			$args->password = md5($output->data->new_password);
-			unset($args->denied);
 		}
 		// Back up the value of $Output->data->is_register
 		$is_register = $output->data->is_register;
 
 		$output = executeQuery('member.updateMemberPassword', $args);
-		if(!$output->toBool()) return $this->stop($output->getMessage());
+		if(!$output->toBool())
+		{
+			return $this->stop($output->getMessage());
+		}
 		// Remove all values having the member_srl from authentication table
 		executeQuery('member.deleteAuthMail',$args);
 
@@ -1247,6 +1271,12 @@ class memberController extends member
 		$output = executeQueryArray('member.getAuthMailInfo', $auth_args);
 		if(!$output->data || !$output->data[0]->auth_key)  return new Object(-1, 'msg_invalid_request');
 		$auth_info = $output->data[0];
+		
+		// Update the regdate of authmail entry
+		$renewal_args = new stdClass;
+		$renewal_args->member_srl = $member_info->member_srl;
+		$renewal_args->auth_key = $auth_info->auth_key;
+		$output = executeQuery('member.updateAuthMail', $renewal_args);	
 
 		$memberInfo = array();
 		global $lang;
@@ -1964,15 +1994,21 @@ class memberController extends member
 
 		list($args->email_id, $args->email_host) = explode('@', $args->email_address);
 		// Website, blog, checks the address
+
+		// Sanitize user ID, username, nickname, homepage, blog
+		$args->user_id = htmlspecialchars($args->user_id, ENT_COMPAT | ENT_HTML401, 'UTF-8', false);
+		$args->user_name = htmlspecialchars($args->user_name, ENT_COMPAT | ENT_HTML401, 'UTF-8', false);
+		$args->nick_name = htmlspecialchars($args->nick_name, ENT_COMPAT | ENT_HTML401, 'UTF-8', false);
+		$args->homepage = htmlspecialchars($args->homepage, ENT_COMPAT | ENT_HTML401, 'UTF-8', false);
+		$args->blog = htmlspecialchars($args->blog, ENT_COMPAT | ENT_HTML401, 'UTF-8', false);
 		if($args->homepage && !preg_match("/^[a-z]+:\/\//i",$args->homepage)) $args->homepage = 'http://'.$args->homepage;
 		if($args->blog && !preg_match("/^[a-z]+:\/\//i",$args->blog)) $args->blog = 'http://'.$args->blog;
 		// Create a model object
 		$oMemberModel = getModel('member');
 		
-		// ID check is prohibited
+		// Check password strength
 		if($args->password && !$password_is_hashed)
 		{
-			// check password strength
 			if(!$oMemberModel->checkPasswordStrength($args->password, $config->password_strength))
 			{
 				$message = Context::getLang('about_password_strength');
@@ -1980,29 +2016,43 @@ class memberController extends member
 			}
 			$args->password = md5($args->password);
 		}
-		elseif(!$args->password) unset($args->password);
-		if($oMemberModel->isDeniedID($args->user_id)) return new Object(-1,'denied_user_id');
-		// ID, nickname, email address of the redundancy check
+		elseif(!$args->password)
+		{
+			unset($args->password);
+		}
+
+		// Check if ID is prohibited
+		if($oMemberModel->isDeniedID($args->user_id))
+		{
+			return new Object(-1,'denied_user_id');
+		}
+
+		// Check if ID is duplicate
 		$member_srl = $oMemberModel->getMemberSrlByUserID($args->user_id);
 		if($member_srl) return new Object(-1,'msg_exists_user_id');
 
-		// nickname check is prohibited
+		// Check if nickname is prohibited
 		if($oMemberModel->isDeniedNickName($args->nick_name))
 		{
 			return new Object(-1,'denied_nick_name');
 		}
+		
+		// Check if nickname is duplicate
 		$member_srl = $oMemberModel->getMemberSrlByNickName($args->nick_name);
-		if($member_srl) return new Object(-1,'msg_exists_nick_name');
-
+		if($member_srl)
+		{
+			return new Object(-1,'msg_exists_nick_name');
+		}
+		
+		// Check if email address is duplicate
 		$member_srl = $oMemberModel->getMemberSrlByEmailAddress($args->email_address);
-		if($member_srl) return new Object(-1,'msg_exists_email_address');
+		if($member_srl)
+		{
+			return new Object(-1,'msg_exists_email_address');
+		}
 
 		// Insert data into the DB
 		$args->list_order = -1 * $args->member_srl;
-		$args->nick_name = htmlspecialchars($args->nick_name, ENT_COMPAT | ENT_HTML401, 'UTF-8', false);
-		$args->homepage = htmlspecialchars($args->homepage, ENT_COMPAT | ENT_HTML401, 'UTF-8', false);
-		$args->blog = htmlspecialchars($args->blog, ENT_COMPAT | ENT_HTML401, 'UTF-8', false);
-
 
 		if(!$args->user_id) $args->user_id = 't'.$args->member_srl;
 		if(!$args->user_name) $args->user_name = $args->member_srl;
@@ -2122,49 +2172,75 @@ class memberController extends member
 				return $this->stop('msg_invalid_request');
 			}
 		}
-
+		
+		// Sanitize user ID, username, nickname, homepage, blog
+		$args->user_id = htmlspecialchars($args->user_id, ENT_COMPAT | ENT_HTML401, 'UTF-8', false);
+		$args->user_name = htmlspecialchars($args->user_name, ENT_COMPAT | ENT_HTML401, 'UTF-8', false);
+		$args->nick_name = htmlspecialchars($args->nick_name, ENT_COMPAT | ENT_HTML401, 'UTF-8', false);
+		$args->homepage = htmlspecialchars($args->homepage, ENT_COMPAT | ENT_HTML401, 'UTF-8', false);
+		$args->blog = htmlspecialchars($args->blog, ENT_COMPAT | ENT_HTML401, 'UTF-8', false);
+		if($args->homepage && !preg_match("/^[a-z]+:\/\//is",$args->homepage)) $args->homepage = 'http://'.$args->homepage;
+		if($args->blog && !preg_match("/^[a-z]+:\/\//is",$args->blog)) $args->blog = 'http://'.$args->blog;
+		
 		// check member identifier form
 		$config = $oMemberModel->getMemberConfig();
 
 		$output = executeQuery('member.getMemberInfoByMemberSrl', $args);
 		$orgMemberInfo = $output->data;
 
+		// Check if email address or user ID is duplicate
 		if($config->identifier == 'email_address')
 		{
 			$member_srl = $oMemberModel->getMemberSrlByEmailAddress($args->email_address);
-			if($member_srl&&$args->member_srl!=$member_srl) return new Object(-1,'msg_exists_email_address');
-
+			if($member_srl && $args->member_srl != $member_srl)
+			{
+				return new Object(-1,'msg_exists_email_address');
+			}
 			$args->email_address = $orgMemberInfo->email_address;
 		}
 		else
 		{
 			$member_srl = $oMemberModel->getMemberSrlByUserID($args->user_id);
-			if($member_srl&&$args->member_srl!=$member_srl) return new Object(-1,'msg_exists_user_id');
-
+			if($member_srl && $args->member_srl != $member_srl)
+			{
+				return new Object(-1,'msg_exists_user_id');
+			}
 			$args->user_id = $orgMemberInfo->user_id;
 		}
+		
+		// Check if ID is prohibited
+		if($args->user_id && $oMemberModel->isDeniedID($args->user_id))
+		{
+			return new Object(-1,'denied_user_id');
+		}
 
+		// Check if ID is duplicate
+		$member_srl = $oMemberModel->getMemberSrlByUserID($args->user_id);
+		if($member_srl && $args->member_srl != $member_srl)
+		{
+			return new Object(-1,'msg_exists_user_id');
+		}
+
+		// Check if nickname is prohibited
 		if($args->nick_name && $oMemberModel->isDeniedNickName($args->nick_name))
 		{
 			return new Object(-1, 'denied_nick_name');
 		}
 		
 		$member_srl = $oMemberModel->getMemberSrlByNickName($args->nick_name);
- 		if($member_srl && $orgMemberInfo->nick_name != $args->nick_name) return new Object(-1,'msg_exists_nick_name');
+ 		if($member_srl && $args->member_srl != $member_srl)
+ 		{
+ 			return new Object(-1,'msg_exists_nick_name');
+ 		}
 
 		list($args->email_id, $args->email_host) = explode('@', $args->email_address);
-		// Website, blog, checks the address
-		if($args->homepage && !preg_match("/^[a-z]+:\/\//is",$args->homepage)) $args->homepage = 'http://'.$args->homepage;
-		if($args->blog && !preg_match("/^[a-z]+:\/\//is",$args->blog)) $args->blog = 'http://'.$args->blog;
-
 
 		$oDB = &DB::getInstance();
 		$oDB->begin();
-		// DB in the update
-
+		
+		// Check password strength
 		if($args->password)
 		{
-			// check password strength
 			if(!$oMemberModel->checkPasswordStrength($args->password, $config->password_strength))
 			{
 				$message = Context::getLang('about_password_strength');
@@ -2173,7 +2249,11 @@ class memberController extends member
 				
 			$args->password = md5($args->password);
 		}
-		else $args->password = $orgMemberInfo->password;
+		else
+		{
+			$args->password = $orgMemberInfo->password;
+		}
+
 		if(!$args->user_name) $args->user_name = $orgMemberInfo->user_name;
 		if(!$args->user_id) $args->user_id = $orgMemberInfo->user_id;
 		if(!$args->nick_name) $args->nick_name = $orgMemberInfo->nick_name;
